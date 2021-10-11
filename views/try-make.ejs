@@ -1,0 +1,49 @@
+<section>
+    <div class="w-10/12 mx-auto grid md:grid-cols-2 gap-x-8 py-20">
+        <div class="hidden md:inline">
+            <img src="/img/try-img.png" alt="">
+        </div>
+        <div class="grid grid-cols-1 gap-y-4">
+            <div
+                class="card-group max-h-64 <%= (typeof errors !='undefined') ? 'bg-box-danger' : (typeof urls !='undefined') ? 'bg-box-success' : '' %>">
+                <div class="card-body align-middle">
+                    <h2 class="title">
+                        <%= (typeof errors !='undefined' ) ? 'Fail Convert' : (typeof urls !='undefined' )
+                            ? 'Success Convert' : 'Short Url' %>
+                    </h2>
+                    <% if(typeof errors !='undefined' ){ %>
+                        <% errors.forEach(error=>{ %>
+                            <p class="mx-auto mt-5">
+                                <%= error.msg %>
+                            </p>
+                            <% }) %>
+                                <% }else if(typeof urls !='undefined' ) { %>
+                                    <ul class="list-outside list-disc mx-8">
+                                        <li>
+                                            Original Url : <%= urls.original_url %>
+                                        </li>
+                                        <li>
+                                            Dikecilkan menjadi : <a href="<%= `/shorturl/${urls.short_url}` %>"
+                                                class="underline">
+                                                <%= `${location}/shorturl/${urls.short_url}` %>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <% }else{ %>
+                                        <p class="mx-auto mt-5">
+                                            Sebelum mengecilkan url harap mengisi url pada box input dibawah.
+                                        </p>
+                                        <% } %>
+                </div>
+            </div>
+            <form action="/try-make" method="post">
+                <div class="form-group mb-5">
+                    <input type="text" class="form-control font-mono text-xl" placeholder="Masukan Url..." name="url">
+                </div>
+                <div class="form-button grid">
+                    <button type="submit" class="button btn-trakteer">Make</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

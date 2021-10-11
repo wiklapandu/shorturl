@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+.button{
+    @apply font-medium py-3 text-center transition-all;
+}
+.btn-trakteer{
+    @apply border border-text-color-title shadow-btn-trakteer hover:shadow-btn-trakteer-alt focus:shadow-trakteer-alt;
+}
+.vertical-menu{
+    @apply absolute bg-white w-full top-0 left-0 z-10;
+    height: 100vh;
+    transition: all .5s;
+    transform: translateX(1080px);
+}
+
+/* Card Group */
+.card-group{
+    @apply border border-text-color-title py-2 shadow-trakteer;
+    min-height: 30vh;
+}
+.card-group .card-body{
+    @apply  flex flex-col mx-8;
+}
+.card-group .card-body .title{
+    @apply  text-xl my-3 mx-auto;
+}
+
+/* form group */
+.form-group{
+    @apply  grid;
+}
+.form-group .form-control{
+    @apply px-3 py-2 border outline-none;
+}
+
+.navbar-head{
+    @apply  p-3 fixed w-full;
+}
+.navbar-head .container{
+    @apply mx-auto flex items-center;
+}
+.navbar-brand{
+    @apply text-2xl font-sans font-bold;
+}
+.menu-md-group{
+    @apply ml-auto md:hidden;
+}
+.vertical-menu .menu-group{
+    @apply grid gap-y-6 m-3;
+}
+.vertical-menu .menu-group .menu-list{
+    @apply  grid grid-cols-1 gap-y-3 cursor-pointer;
+}

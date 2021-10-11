@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikla - Short Url</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/tailwind.css">
+</head>
+
+<body>
+    <nav class="navbar-head bg-white">
+        <div class="container">
+            <h1 class="navbar-brand">
+                <span class="text-text-color-title">
+                    Short
+                </span>
+                <span class="text-yellow-dark">Url</span>
+            </h1>
+            <div class="menu-md-group">
+                <a class="text-2xl cursor-pointer" id="openMenu">
+                    <i class="fas fa-fw fa-bars"></i>
+                </a>
+                <div id="Verticalmenu" class="vertical-menu">
+                    <div class="menu-group">
+                        <div>
+                            <a class="text-2xl cursor-pointer" id="closeMenu">
+                                <i class="fas fa-times"></i>
+                            </a>
+                        </div>
+                        <ul class="menu-list">
+                            <li class="font-medium">
+                                <a href="/#home">Home</a>
+                            </li>
+                            <li class="font-medium">
+                                <a href="/#about">About</a>
+                            </li>
+                            <li class="font-medium">
+                                <a href="/try-make">Try Make</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <ul class="md:flex ml-auto cursor-pointer hidden">
+                <li class="mx-3 font-medium">
+                    <a href="/#home">Home</a>
+                </li>
+                <li class="mx-3 font-medium">
+                    <a href="/#about">About</a>
+                </li>
+                <li class="mx-3 font-medium">
+                    <a href="/try-make">Try Make</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- include layouts -->
+
+    <%- body %>
+
+
+        <footer class="bg-text-color-title">
+            <div class="container mx-auto grid grid-cols-2 lg:grid-cols-4 gap-x-4 items-center">
+                <div class="hidden lg:inline lg:col-span-1">
+                    <img src="/img/footer-img.png" class="my-5">
+                </div>
+                <div class="col-span-2">
+                    <div class="mx-auto text-button-white grid grid-cols-1">
+                        <div class="px-3 py-4">
+                            <h2 class="font-medium text-3xl">
+                                Short
+                                <span class="text-yellow-dark">Url</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-3 px-3">
+                        <div>
+                            <h2 class="font-medium text-white mb-3 text-2xl">Overview</h2>
+                            <div class="grid grid-cols-1 gap-y-3">
+                                <div class="text-white hover:underline">
+                                    <a href=/">Home</a>
+                                </div>
+                                <div class="text-white hover:underline">
+                                    <a href="">About</a>
+                                </div>
+                                <div class="text-white hover:underline">
+                                    <a href="">Try Make</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="font-medium text-white mb-3 text-2xl">
+                                Sosmed
+                            </h2>
+                            <div class="grid grid-cols-3 md:grid-cols-2 gap-2 text-white">
+                                <a class="text-lg" href="https://twitter.com/wiklaPan">
+                                    <i class="fab fa-fw fa-twitter"></i>
+                                    <span class="hidden md:inline">Twitter</span>
+                                </a>
+                                <a class="text-lg" href="https://wiklapandu.medium.com/">
+                                    <i class="fab fa-fw fa-medium"></i>
+                                    <span class="hidden md:inline">Medium</span>
+                                </a>
+                                <a class="text-lg" href="http://github.com/wiklapandu">
+                                    <i class="fab fa-fw fa-github"></i>
+                                    <span class="hidden md:inline">Github</span>
+                                </a>
+                                <a class="text-lg" href="https://www.instagram.com/_wiklapandu/">
+                                    <i class="fab fa-fw fa-instagram"></i>
+                                    <span class="hidden md:inline">Instagram</span>
+                                </a>
+                                <a class="text-lg" href="https://www.linkedin.com/in/wiklapandu/">
+                                    <i class="fab fa-fw fa-linkedin"></i>
+                                    <span class="hidden md:inline">Linkedin</span>
+                                </a>
+                                <a class="text-lg" href="https://wiklapandu.github.io/">
+                                    <i class="fas fa-globe"></i>
+                                    <span class="hidden md:inline">Website</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="/js/navigation.js"></script>
+</body>
+
+</html>

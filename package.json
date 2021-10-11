@@ -1,0 +1,30 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "postcss": "^8.3.9",
+    "tailwindcss": "^2.2.16"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-validator": "^6.12.2",
+    "mongoose": "^6.0.9",
+    "nodemon": "^2.0.13",
+    "postcss-cli": "^9.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "validator": "^13.6.0"
+  },
+  "scripts": {
+    "start": "nodemon index.js",
+    "run:prod": "node server.js",
+    "build:css": "postcss src/css/style.css -o public/css/tailwind.css"
+  },
+  "name": "wikla-short",
+  "version": "1.0.0",
+  "main": "postcss.config.js",
+  "author": "Wikla",
+  "license": "ISC",
+  "description": ""
+}
